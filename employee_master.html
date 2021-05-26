@@ -36,12 +36,12 @@
 
 	<body>
 
-		<!-- Loading starts -->
+		<!-- Loading starts
 		<div id="loading-wrapper">
 			<div class="spinner-border" role="status">
 				<span class="sr-only">Loading...</span>
 			</div>
-		</div>
+		</div> -->
 		<!-- Loading ends -->
 
 
@@ -775,21 +775,22 @@
                             <div class="col-xl-4 col-lglg-4 col-md-4 col-sm-4 col-12">
                                 <div class="form-group">
                                     <label >Employee Code <span class="required">*</span></label>
-                                    <input type="text" class="form-control" id="employeecode" name="employeecode" placeholder="Employee Id">
+                                    <input type="text" class="form-control" id="employeecode" name="employeecode" >
 									<label id="employeecode_valid" class="text-danger">Enter Employee Code</label>
                                 </div>
                             </div>
                             <div class="col-xl-4 col-lglg-4 col-md-4 col-sm-4 col-12">
                                 <div class="form-group">
                                     <label for="disabledInput">Employee Name<span class="required">*</span></label>
-                                    <input type="text" id="employeename" name="employeename" class="form-control" placeholder="Employee Name" >
+                                    <input type="text" id="employeename" name="employeename" class="form-control"  >
 									<label id="employeename_valid" class="text-danger">Enter Employee Name</label>
                                 </div>
                             </div>
+			
                             <div class="col-xl-4 col-lglg-4 col-md-4 col-sm-4 col-12">
                                 <div class="form-group">
                                     <label for="inputEmail">Date Of birth <span class="required">*</span></label>
-                                    <input type="text" class="form-control" id="dateofbirth" name="dateofbirth" placeholder="Date Of birth">
+                                    <input type="date" class="form-control" id="dateofbirth" name="dateofbirth" >
 									<label id="dateofbirth_valid" class="text-danger">Select Date Of Birth</label>
                                 </div>
                             </div>
@@ -806,14 +807,18 @@
                             <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12">
                                 <div class="form-group">
                                     <label for="inputReadOnly">E-Mail Id <span class="required">*</span></label>
-                                    <input class="form-control" id="emailid" name="emailid" type="text" placeholder="E-Mail Id" >
+                                    <input class="form-control" id="emailid" name="emailid" type="text"  >
 									<label id="emailid_valid" class="text-danger">Enter Email Id</label>
                                 </div>
                             </div>
                             <div class="col-xl-4 col-lglg-4 col-md-4 col-sm-4 col-12">
                                 <div class="form-group">
                                     <label for="disabledInput">Designation <span class="required">*</span></label>
-                                    <input type="text" id="designation" name="designation" class="form-control" placeholder="Designation" >
+                                    <div class="d-flex">
+										<select class="form-control w-75" id="designation" name="designation">
+											<option> Select Designation</option>
+										</select>
+									<button style="width: 35px;height: 35px;margin-left: 20px;font-size: 20px; border: none;outline: none;color:#fff;background: #af772a;">+</button></div>
 									<label id="designation_valid" class="text-danger">Enter Designation</label>
                                 </div>
                             </div>
@@ -821,22 +826,29 @@
                             <div class="col-xl-4 col-lglg-4 col-md-4 col-sm-4 col-12">
                                 <div class="form-group">
                                     <label for="disabledInput">Employee Number <span class="required">*</span></label>
-                                    <input type="text" id="employeenumber" name="employeenumber" class="form-control" placeholder="Employee Number" >
+                                    <input type="text" id="employeenumber" name="employeenumber" class="form-control"  >
 									<label id="employeenumber_valid" class="text-danger">Enter Employee Number</label>
                                 </div>
                             </div>
                             <div class="col-xl-4 col-lglg-4 col-md-4 col-sm-4 col-12">
                                 <div class="form-group">
                                     <label for="disabledInput">Date Of Joining <span class="required">*</span></label>
-                                    <input type="date" id="dateofjoining" name="dateofjoining" class="form-control" placeholder="Date Of Joining" >
+                                    <input type="date" id="dateofjoining" name="dateofjoining" class="form-control" >
 									<label id="dateofjoining_valid" class="text-danger">Select Data Of Joining</label>
                                 </div>
                             </div>
                             <div class="col-xl-4 col-lglg-4 col-md-4 col-sm-4 col-12">
                                 <div class="form-group">
                                     <label for="disabledInput">Contact <span class="required">*</span></label>
-                                    <input type="text" id="contact" name="contact" class="form-control" placeholder="Contact" >
+                                    <input type="text" id="contact" name="contact" class="form-control"  >
 									<label id="contact_valid" class="text-danger">Enter Contact Number</label>
+                                </div>
+                            </div>
+							<div class="col-xl-4 col-lglg-4 col-md-4 col-sm-4 col-12">
+                                <div class="form-group">
+                                    <div style="width: 200px;height: 200px; border: 1px solid gray;margin: 10px auto;"> <img src="..." alt="..."> </div>
+                                    <input type="file" class="form-control" id="dateofbirth" name="dateofbirth" >
+									<label id="dateofbirth_valid" class="text-danger">Select Date Of Birth</label>
                                 </div>
                             </div>
                             
@@ -884,43 +896,43 @@
                         <div class="row gutters">
                             <div class="col-xl-4 col-lglg-4 col-md-4 col-sm-4 col-12">
                                 <div class="form-group">
-                                    <label for="inputName">Expertise<span class="required">*</span></label>
-                                    <input type="text" class="form-control" id="expertises" name="expertises" placeholder="Expertise">
-									<label id="expertises_valid" class="text-danger">Enter Expertise</label>
+                                    <label for="inputName">Basic<span class="required">*</span></label>
+                                    <input type="text" class="form-control" id="expertises" name="Basic">
+									<label id="basic_valid" class="text-danger">Enter Basic</label>
                                 </div>
                             </div>
                             <div class="col-xl-4 col-lglg-4 col-md-4 col-sm-4 col-12">
                                 <div class="form-group">
                                     <label for="disabledInput">HRA<span class="required">*</span></label>
-                                    <input type="text" id="hra" name="hra" class="form-control" placeholder="HRA" >
+                                    <input type="text" id="hra" name="hra" class="form-control"  >
 									<label id="hra_valid" class="text-danger">Enter HRA</label>
                                 </div>
                             </div>
                             <div class="col-xl-4 col-lglg-4 col-md-4 col-sm-4 col-12">
                                 <div class="form-group">
                                     <label for="inputEmail">Conveyance<span class="required">*</span></label>
-                                    <input type="text" class="form-control" id="conveyance" name="conveyance" placeholder="Conveyance">
+                                    <input type="text" class="form-control" id="conveyance" name="conveyance" >
 									<label id="conveyance_valid" class="text-danger">Enter Conveyance</label>
                                 </div>
                             </div>
                             <div class="col-xl-4 col-lglg-4 col-md-4 col-sm-4 col-12">
                                 <div class="form-group">
                                     <label for="inputPwd">Allowance<span class="required">*</span></label>
-                                    <input type="text" class="form-control" id="allowance" name="allowance" placeholder="Allowance">
+                                    <input type="text" class="form-control" id="allowance" name="allowance" >
 									<label id="allowance_valid" class="text-danger">Enter Allowance</label>
                                 </div>
                             </div>
                             <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12">
                                 <div class="form-group">
                                     <label for="inputReadOnly">Incentive Percent<span class="required">*</span></label>
-                                    <input class="form-control" id="incentivepercent" name="incentivepercent" type="text" placeholder="Incentive Percent" >
+                                    <input class="form-control" id="incentivepercent" name="incentivepercent" type="text" >
 									<label id="incentivepercent_valid" class="text-danger">Enter Incentive Percent</label>
                                 </div>
                             </div>
                             <div class="col-xl-4 col-lglg-4 col-md-4 col-sm-4 col-12">
                                 <div class="form-group">
                                     <label for="disabledInput">Gross Pay<span class="required">*</span></label>
-                                    <input type="text" id="grosspay" name="grosspay" class="form-control" placeholder="Gross Pay" >
+                                    <input type="text" id="grosspay" name="grosspay" class="form-control"  >
 									<label id="grosspay_valid" class="text-danger">Enter Gross Pay</label>
                                 </div>
                             </div>
@@ -928,43 +940,50 @@
                             <div class="col-xl-4 col-lglg-4 col-md-4 col-sm-4 col-12">
                                 <div class="form-group">
                                     <label for="disabledInput">TDS<span class="required">*</span></label>
-                                    <input type="text" id="tds" name="tds" class="form-control" placeholder="TDS " >
+                                    <input type="text" id="tds" name="tds" class="form-control" >
 									<label id="tds_valid" class="text-danger">Enter TDS</label>
                                 </div>
                             </div>
                             <div class="col-xl-4 col-lglg-4 col-md-4 col-sm-4 col-12">
                                 <div class="form-group">
                                     <label for="disabledInput">PF<span class="required">*</span></label>
-                                    <input type="text" id="pf" name="pf" class="form-control" placeholder="PF" >
+                                    <input type="text" id="pf" name="pf" class="form-control" >
 									<label id="pf_valid" class="text-danger">Enter PF</label>
                                 </div>
                             </div>
                             <div class="col-xl-4 col-lglg-4 col-md-4 col-sm-4 col-12">
                                 <div class="form-group">
                                     <label for="disabledInput">ESI<span class="required">*</span></label>
-                                    <input type="text" id="esi" name="esi" class="form-control" placeholder="ESI" >
+                                    <input type="text" id="esi" name="esi" class="form-control" >
 									<label id="esi_valid" class="text-danger">Enter ESI</label>
                                 </div>
                             </div>
                             <div class="col-xl-4 col-lglg-4 col-md-4 col-sm-4 col-12">
                                 <div class="form-group">
                                     <label for="disabledInput">Loans<span class="required">*</span></label>
-                                    <input type="text" id="loans" name="lones" class="form-control" placeholder="Loans " >
+                                    <input type="text" id="loans" name="lones" class="form-control"  >
 									<label id="loans_valid" class="text-danger">Enter Loans</label>
                                 </div>
                             </div>
                             <div class="col-xl-4 col-lglg-4 col-md-4 col-sm-4 col-12">
                                 <div class="form-group">
                                     <label for="disabledInput">Salary Advance<span class="required">*</span></label>
-                                    <input type="text" id="salaryadvance" name="salaryadvance" class="form-control" placeholder="Salary Advance" >
+                                    <input type="text" id="salaryadvance" name="salaryadvance" class="form-control"  >
 									<label id="salaryadvance_valid" class="text-danger">Enter Salary Advance</label>
                                 </div>
                             </div>
                             <div class="col-xl-4 col-lglg-4 col-md-4 col-sm-4 col-12">
                                 <div class="form-group">
                                     <label for="disabledInput">Total Deduction<span class="required">*</span></label>
-                                    <input type="text" id="totaldeduction" name="totaldeduction" class="form-control" placeholder="Total Deduction" >
+                                    <input type="text" id="totaldeduction" name="totaldeduction" class="form-control"  >
 									<label id="totaldeduction_valid" class="text-danger">Enter Total Deduction</label>
+                                </div>
+                            </div>
+							<div class="col-xl-4 col-lglg-4 col-md-4 col-sm-4 col-12">
+                                <div class="form-group">
+                                    <label for="disabledInput">Any Other Deduction<span class="required">*</span></label>
+                                    <input type="text" id="anyotherdeduction" name="anyotherdeduction" class="form-control"  >
+									<label id="anyotherdeduction_valid" class="text-danger">Any Other Deduction</label>
                                 </div>
                             </div>
                             
@@ -996,7 +1015,7 @@
                               <tr>
                                 <th>  <div class="form-group">
                                     <select class="form-control form-control-lg">
-                                        <option>Large select</option>
+                                        <option>Select Institute Type</option>
                                     </select>
                                 </div></th>
                                 <td> <input type="text" id="disabledInput" class="form-control"  ></td>
@@ -1009,7 +1028,7 @@
                               <tr>
                                 <th>  <div class="form-group">
                                     <select class="form-control form-control-lg">
-                                        <option>Large select</option>
+                                        <option>Select Institute Type</option>
                                     </select>
                                 </div></th>
                                 <td> <input type="text" id="disabledInput" class="form-control"  ></td>
@@ -1022,7 +1041,7 @@
                               <tr>
                                 <th>  <div class="form-group">
                                     <select class="form-control form-control-lg">
-                                        <option>Large select</option>
+                                        <option>Select Institute Type</option>
                                     </select>
                                 </div></th>
                                 <td> <input type="text" id="disabledInput" class="form-control"  ></td>
@@ -1035,7 +1054,7 @@
                               <tr>
                                 <th>  <div class="form-group">
                                     <select class="form-control form-control-lg">
-                                        <option>Large select</option>
+                                        <option>Select Institute Type</option>
                                     </select>
                                 </div></th>
                                 <td> <input type="text" id="disabledInput" class="form-control"  ></td>
@@ -1048,7 +1067,7 @@
                               <tr>
                                 <th> <div class="form-group w-100">
 										<select class="form-control form-control-lg">
-											<option>Large select</option>
+											<option>Select Institute Type</option>
 										</select>
                                     </div>
 							    </th>
@@ -1116,23 +1135,26 @@
             </div>
 
             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                <div class="card">
+               
                    <div class="row">
-					   <div class="col-md-4">
-
-					   </div>
-					   <div class="col-md-4">
-						<button type="submit" class="btn btn-primary mb-2">Download</button>
+					   <div class="col-md-2 " ></div>
+					   <div class="col-md-2">
+						<button type="submit" class="btn btn-primary mb-2 " >Download</button>
 						<button type="submit" class="btn btn-primary mb-2">Upload</button>
 
-					</div>
-					<div class="col-md-4">
-						<button type="submit" class="btn btn-primary mb-2">Save</button>
-						<button type="submit" class="btn btn-primary mb-2">Cancel</button>
+					   </div>
+					   <div class="col-md-2"></div>
+					   <div class="col-md-2"></div>
+					   <div class="col-md-2"></div>
+					<div class="col-md-2">
+						
+							<button type="submit" class="btn btn-primary ">Save</button>
+						    <button type="submit" class="btn btn-primary ">Cancel</button>
+					
 
 					</div>
 
-				   </div>
+				 
                  
                 </div>
             </div>
@@ -1191,7 +1213,19 @@
 		color: #af772a;
 	}
 </style>
-
+<!--placeholder="Total Deduction"-->
+<!--placeholder="Total Deduction"-->
+<!--placeholder="Salary Advance"-->
+<!-- placeholder="Incentive Percent"-->
+<!---placeholder="HRA"-->
+<!----placeholder="Conveyance"-->
+<!--- placeholder="Expertise"-->
+<!--placeholder="Allowance"-->
+<!--placeholder="Gross Pay"-->
+<!-- placeholder="TDS "-->
+<!--placeholder="Loans "-->
+<!--placeholder="ESI" -->
+<!-- placeholder="PF"-->
 </body>
 
 </html>
