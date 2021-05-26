@@ -744,6 +744,25 @@ function esi() {
 				totaldeductionerror = true;	
 			}
 			}
+	
+			// basic
+		$('#basic_valid').hide();	
+		let basicerror = true;
+		$('#basic').keyup(function () {			
+			basic();
+		});
+		function basic() {
+			let basicValue = $('#basic').val();
+			if (basicValue == '') {
+			$('#basic_valid').show();
+			basicerror = false;
+				return false;
+			}	
+			else {
+				$('#basic_valid').hide();
+				basicerror = true;	
+			}
+			}
 
 			$('#submit').click(function () {	
 				employeecode();dateofjoining();
@@ -754,8 +773,9 @@ function esi() {
 				designation();employeenumber();
 				hra();conveyance();allowance();pf();
 				incentivepercent();grosspay();tds();
-			if ( 
-				totaldeductionerror == true &&  employeecodeerror==true 
+				basic();
+					if ( 
+				totaldeductionerror == true &&  employeecodeerror==true &&  basicerror==true 
 				&&  dateofjoiningerror==true  && employeenameerror==true
 				&&  contacterror==true
 				&&  salaryadvanceerror==true
